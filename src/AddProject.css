@@ -233,10 +233,10 @@ label {
 		font-size: 30px;
 	}
 
-	.group input[type="text"], .group textarea {
+	/* .group input[type="text"], .group textarea {
 		width: 250px;
 		margin: 0 auto;
-	}
+	} */
 
 	.group label {
 		text-align: center;

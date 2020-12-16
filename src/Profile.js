@@ -2,10 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Route, Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import './DefaultStyles.css';
-import './Profile.css';
-
-
-
+import './Profile.scss';
 import app from "./base.js";
 
 const Profile = () => {

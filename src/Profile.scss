@@ -1,6 +1,12 @@
+@import './colors.scss';
+
 * {
     font-family: sans-serif;
 }
+
+.section-profile {
+  display: flex;
+  justify-content: space-between;
   
   .profile__fullname {
     font-size: 48px;
@@ -30,13 +36,10 @@
   }
   
   .profile_image img {
-    width: auto;
     height: 570px;
-  }
-  
-  .section-profile {
-    display: flex;
-    justify-content: space-between;
+    @media (max-width: 1347px) {
+        height: 400px;
+    }
   }
   
   
@@ -45,11 +48,6 @@
     border: 3px solid #337D5C;
     transition: 0.6s ease;
   }
-  
-  /* .profile__button_edit_fullname:hover {
-    color: #FFF;
-    background-color: #337D5C;
-  } */
   
   .profile__button_edit_email {
     color: #536DFE;
@@ -67,12 +65,14 @@
     border: 3px solid #D63535;
   }
   
+}
+  
+  
   
   
   @media (max-width: 1347px) {
     .profile_image img {
-      height: 400px;
-      
+      height: 200px;
     }
   }
   
