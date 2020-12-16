@@ -1,0 +1,50 @@
+
+  .main-title {
+    font-size: 48px;
+    margin-bottom: 105px;
+    text-align: left;
+  }
+  
+  .section-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+  
+  .section-block {
+    font-size: 20px;
+  }
+  
+  .section-item {
+    font-weight: 600;
+  }
+  
+  .section-block p {
+    width: 700px;
+  }
+  
+  .main-button-contact {
+    width: 350px;
+    margin-top: 105px;
+    margin-bottom: 105px;
+    font-size: 20px;
+  }
+
+  .section-control-block {
+    
+  }
+
+  @media (max-width: 835px) {
+    .main {
+      width: auto;
+    }
+  
+    .section-block p {
+      width: 400px;
+    }
+  
+    .section-info {
+    }
+  }
+
+  

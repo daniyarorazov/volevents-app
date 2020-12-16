@@ -1,0 +1,250 @@
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+
+main {
+	padding-left: 80px;
+}
+
+.main-form {
+
+}
+
+.main-title {
+	display: block;
+	font-size: 36px;
+	margin-top: 106px;
+	margin-bottom: 50px;
+}
+
+.main-block {
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+
+.group {
+	position: relative;
+	margin-bottom: 45px;
+}
+/* 
+.group input[type="text"], .group textarea {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	width: 400px;
+	border: none;
+	border-bottom: 1px solid #757575;
+} */
+
+.group textarea {
+	max-height: 400px;
+	height: 200px;
+}
+
+.group input[type="text"]:focus, textarea:focus {
+	outline: none;
+}
+
+
+label {
+	color: #999;
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 10px;
+	top: 10px;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+
+.group input[type="text"]:focus~label,
+.group input[type="text"]:valid~label,
+.group textarea:valid~label,
+.group textarea:focus~label {
+	top: -20px;
+	font-size: 14px;
+	color: #5264AE;
+}
+
+
+.bar {
+	position: relative;
+	display: block;
+    width: 400px;
+    margin-left: 10px;
+}
+
+.bar:before,
+.bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #5264AE;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+	left: 50%;
+}
+
+.bar:after {
+	right: 50%;
+}
+
+
+.group input[type="text"]:focus~.bar:before,
+.group input[type="text"]:focus~.bar:after,
+.group textarea:focus~.bar:before,
+.group textarea:focus~.bar:after {
+	width: 50%;
+}
+
+
+.highlight {
+	position: absolute;
+	height: 60%;
+	width: 100px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+
+.group input[type="text"]:focus~.highlight, textarea:focus~.highlight {
+	-webkit-animation: inputHighlighter 0.3s ease;
+	-moz-animation: inputHighlighter 0.3s ease;
+	animation: inputHighlighter 0.3s ease;
+}
+
+
+@-webkit-keyframes inputHighlighter {
+	from {
+		background: #5264AE;
+	}
+
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+@-moz-keyframes inputHighlighter {
+	from {
+		background: #5264AE;
+	}
+
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+@keyframes inputHighlighter {
+	from {
+		background: #5264AE;
+	}
+
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+.group h2 {
+	text-align: left;
+	font-size: 20px;
+}
+
+.group-radio {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+
+.radio {
+	display: flex;
+	align-items: center;
+}
+
+.radio__input {
+	display: flex;
+	width: 18px;
+	height: 18px;
+
+}
+
+.radio__text {
+	font-size: 18px;
+	margin-left: 20px;
+}
+
+.button {
+	width: 100%;
+	height: 60px;
+	margin-top: 20px;
+	border: 0;
+	border-radius: 2px;
+	font-weight: 600;
+}
+
+.button[type="submit"] {
+	background-color: #337D5C;
+	color: #fff;
+}
+
+.button-cancel {
+	width: 410px;
+	margin: 0 auto;
+	margin-bottom: 60px;
+	background-color: #D63535;
+	color: #fff;
+}
+
+
+
+@media (max-width: 600px) {
+	main {
+		padding-left: 0;
+	}
+
+	.main-title {
+		font-size: 30px;
+	}
+
+	.group input[type="text"], .group textarea {
+		width: 250px;
+		margin: 0 auto;
+	}
+
+	.group label {
+		text-align: center;
+		left: 8px;
+	}
+
+	.bar {
+		width: 250px;
+		margin: 0 auto;
+	}
+}
