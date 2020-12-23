@@ -86,11 +86,3 @@ const EditProfile = ({history}) => {
 }
 
 export default withRouter(EditProfile);
-
-/*  <h2>Edit profile</h2>
-            <form onSubmit={handleEditProfile}>
-                <input type="text" name="firstname" value={firstname} onChange={(e) => setFirstname(e.target.value)}/>
-                <input type="text" name="lastname" value={lastname} onChange={(e) => setLastname(e.target.value)}/>
-                <button type="submit">Edit profile</button>
-            </form> */
-
