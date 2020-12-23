@@ -82,6 +82,7 @@
     }
   
     .section-profile {
+      width: auto;
       justify-content: center;
     }
 
@@ -94,23 +95,24 @@
 
     .section-profile {
         justify-content: center;
-    }
+    
 
-    .profile__fullname {
+      .profile__fullname {
+          margin: 0 auto;
+          font-size: 36px;
+      }
+
+      .profile__outline_buttons {
+        width: 100%;
+        font-weight: 600;
+        font-size: 20px;
         margin: 0 auto;
-        font-size: 36px;
-    }
-
-    .profile__outline_buttons {
-      width: 250px;
-      font-weight: 600;
-      font-size: 20px;
-      margin: 0 auto;
-      margin-top: 20px;
-    }
-  
-    .profile__icons {
-      margin-right: 20px;
+        margin-top: 20px;
+      }
+    
+      .profile__icons {
+        margin-right: 20px;
+      }
     }
   }
   

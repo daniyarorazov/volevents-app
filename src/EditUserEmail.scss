@@ -46,16 +46,16 @@
         flex-direction: column;
     }
 
-    .name {
-        width: 100%;
-    }
-
-    .edit__old-email {
-        @include input;
+    .edit__form-block {
         width: 100%;
     }
 
     .edit__new-email {
+        @include input;
+        width: 100%;
+    }
+
+    .edit__password {
         @include input;
         width: 100%;
         margin-top: 30px;
@@ -74,6 +74,9 @@
         background-color: $red;
         width: 100%;
         margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     @media(max-width:400px) {

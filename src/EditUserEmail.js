@@ -50,21 +50,31 @@ const EditUserEmail = ({history}) => {
                     <div className="section-body">
                         <img className="edit-email-image" src={require('./images/EditUserEmail/edit-email-image.svg').default} alt="email image" className="edit-email-image"/>
                         <div className="block-edit-email">
-                            <input 
-                                type="text" 
-                                className="edit__old-email input" 
-                                placeholder="Текущий e-mail" />
-                            <input 
-                                type="text" 
-                                className="edit__new-email input" 
-                                placeholder="Новый e-mail" />
-                                
-                            <button className="edit__button-edit">
-                                Изменить
-                            </button>
-                            <button className="edit__button-cancel">
+                            <form onSubmit={handleEditUserEmail} className="edit__form-block">
+                                <input 
+                                    type="email" 
+                                    name="email"  
+                                    className="edit__new-email input" 
+                                    value={email} 
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="Новый e-mail" />
+                                <input 
+                                    type="password" 
+                                    name="password"  
+                                    className="edit__password input" 
+                                    value={password} 
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    placeholder="Ваш текущий Пароль" />
+
+                                <button 
+                                    type="submit"
+                                    className="edit__button-edit">
+                                    Изменить
+                                </button>
+                            </form>
+                            <Link to="./profile" className="edit__button-cancel">
                                 Отмена
-                            </button>
+                            </Link>
                         </div>  
                     </div>
                 </div>
