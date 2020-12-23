@@ -1,9 +1,9 @@
 @import './mixins.scss';
 @import './colors.scss';
 
-.section-edit-email {
+.section-edit-profile {
 
-    .header-edit-email-items {
+    .header-edit-profile-items {
         display: flex;
         align-items: center;
 
@@ -18,7 +18,7 @@
         margin-left: 70px;
     }
 
-    .header-edit-email-image {
+    .header-edit-profile-image {
         width: 100px;
     }
 
@@ -33,12 +33,12 @@
         align-items: center;
     }
 
-    .edit-email-image {
+    .edit-profile-image {
         margin-bottom: 50px;
         margin-right: 200px;
     }
 
-    .block-edit-email {
+    .block-edit-profile {
         width: 600px;
         align-items: center;
         padding: 0;
@@ -50,7 +50,7 @@
         width: 100%;
     }
 
-    .edit__new-email {
+    .edit__new-profile {
         @include input;
         width: 100%;
     }
@@ -63,7 +63,7 @@
 
     .edit__button-edit {
         @include buttonSolid;
-        background-color: $blue;
+        background-color: $green;
         width: 100%;
         margin-top: 45px;
         font-size: 18px;
@@ -85,20 +85,20 @@
             font-size: 10px;
         }
 
-        .block-edit-email {
+        .block-edit-profile {
             display: block;
             align-items: center;
         }
 
-        .edit-email-image {
+        .edit-profile-image {
             display: none;
         }
 
-        .header-edit-email {
+        .header-edit-profile {
             margin-left: 0;
         }
 
-        .edit-email-header-image {
+        .edit-profile-header-image {
             width: 20%;
             margin-left: 20px;
         }
@@ -106,12 +106,12 @@
     }
 
     @media(max-width:700px) {
-        .header-edit-email-image {
+        .header-edit-profile-image {
             width: 48px;
             margin-left: 10px;
         }
 
-        .block-edit-email {
+        .block-edit-profile {
             width: 100%;
         }
 
@@ -125,13 +125,13 @@
             width: 100%;
         }
 
-        .edit-email-image {
+        .edit-profile-image {
             display: none;
         }
 
 
 
-        .header-edit-email {
+        .header-edit-profile {
             margin-left: 0;
         }
     }
@@ -142,16 +142,16 @@
             margin-left: 20px;
         }
 
-        .edit-email-header-image {
+        .edit-profile-header-image {
             width: 64px;
             margin-left: 20px;
         }
 
-        .edit-email-image {
+        .edit-profile-image {
             display: none;
         }
 
-        .header-edit-email {
+        .header-edit-profile {
             margin-left: 0;
             padding-right: 20px;
         }
@@ -164,7 +164,7 @@
     }
 
     @media (max-width: 1458px) {
-        .edit-email-image {
+        .edit-profile-image {
             width: 300px;
         }
 
@@ -175,15 +175,15 @@
     }
 
     @media (max-width: 1230px) {
-        .edit-email-image {
+        .edit-profile-image {
             display: none;
         }
 
-        .block-edit-email {
+        .block-edit-profile {
             margin: 0 auto;
         }
 
-        .edit-email-header-image {
+        .edit-profile-header-image {
             height: 100px;
         }
     }

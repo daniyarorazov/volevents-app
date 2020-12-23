@@ -11,7 +11,7 @@ main {
 		padding-right: 0;
 	}
 
-	@media (max-width: 700px) { 
+	@media (max-width: 700px) {
 		padding-left: 40px;
 		padding-right: 40px;
 	}
@@ -23,7 +23,7 @@ main {
 }
 
 .section-list-projects {
-		
+
 	.cards-list {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -52,6 +52,7 @@ main {
 
 	.list__title {
 		font-size: 48px;
+
 		@media (max-width: 420px) {
 			font-size: 30px;
 		}
@@ -62,6 +63,7 @@ main {
 		height: 60px;
 		font-size: 24px;
 		float: right;
+
 		@media (max-width: 991px) {
 			width: 100%;
 			margin-top: 40px;
@@ -88,28 +90,28 @@ main {
 		.card-row__block:first-child {
 			margin-right: 15px;
 		}
-	
+
 		.card-title {
 			font-size: 20px;
 			font-weight: 600;
 		}
-	
+
 		.card-main .card-main-group {
 			display: flex;
 			justify-content: space-between;
 			margin-top: 10px;
 		}
-	
+
 		.card-main .card-row__block {
 			display: flex;
 			align-items: center;
 		}
-	
+
 		.card-subtext {
 			font-size: 14px;
 			font-weight: 600;
 		}
-	
+
 		.card-description {
 			max-width: 400px;
 			margin-top: 20px;
@@ -120,4 +122,3 @@ main {
 		margin-bottom: 200px;
 	}
 }
-
