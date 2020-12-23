@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { Route, Link } from 'react-router-dom';
 import { withRouter } from "react-router";
 import app from './base.js';
+import './EditUserEmail.scss';
 
 const EditUserEmail = ({history}) => {
 
@@ -37,8 +38,42 @@ const EditUserEmail = ({history}) => {
 
     return (
         <>
-        
-            <h2>Edit Email</h2>
+            <main>
+                <div className="section-edit-email">
+                    <div className="header-edit-email">
+                        <div className="header-edit-email-items">
+                            <img src={require("./images/EditUserEmail/edit-email-header-image.svg").default} alt="img-header" className="header-edit-email-image"/>
+                            <h4 className="header-title">Изменение почты</h4>
+                        </div>
+                        <hr />
+                    </div>
+                    <div className="section-body">
+                        <img className="edit-email-image" src={require('./images/EditUserEmail/edit-email-image.svg').default} alt="email image" className="edit-email-image"/>
+                        <div className="block-edit-email">
+                            <input 
+                                type="text" 
+                                className="edit__old-email input" 
+                                placeholder="Текущий e-mail" />
+                            <input 
+                                type="text" 
+                                className="edit__new-email input" 
+                                placeholder="Новый e-mail" />
+                                
+                            <button className="edit__button-edit">
+                                Изменить
+                            </button>
+                            <button className="edit__button-cancel">
+                                Отмена
+                            </button>
+                        </div>  
+                    </div>
+                </div>
+            </main>
+        </>
+    )
+}
+
+/* <h2>Edit Email</h2>
             <form onSubmit={handleEditUserEmail}>
                 <input 
                     type="email" 
@@ -54,11 +89,6 @@ const EditUserEmail = ({history}) => {
                     onChange={(e) => setPassword(e.target.value)}/>
                 <button type="submit">Edit Email</button>
             </form>
-            <Link to="./profile"><button>Cancel</button></Link>
-
-        
-        </>
-    )
-}
+            <Link to="./profile"><button>Cancel</button></Link> */
 
 export default withRouter(EditUserEmail);
