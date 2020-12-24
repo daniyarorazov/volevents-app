@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { Route, Link } from 'react-router-dom';
 import { withRouter } from "react-router";
 import app from './base.js';
+import Sidebar from './Sidebar';
 import "./EditUserPassword.scss";
 
 const EditUserPassword = ({history}) => {
@@ -36,6 +37,9 @@ const EditUserPassword = ({history}) => {
 
     return (
         <>
+
+            <Sidebar />
+
             <main>
                 <div className="section-edit-password">
                     <div className="header-edit-password">

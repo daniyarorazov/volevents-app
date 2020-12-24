@@ -2,6 +2,8 @@ import React, { useState, useCallback } from 'react';
 import { Route, Link } from 'react-router-dom';
 import { withRouter } from "react-router";
 import app from './base.js';
+import Sidebar from './Sidebar';
+
 import './EditUserEmail.scss';
 
 const EditUserEmail = ({history}) => {
@@ -38,6 +40,9 @@ const EditUserEmail = ({history}) => {
 
     return (
         <>
+
+            <Sidebar />
+
             <main>
                 <div className="section-edit-email">
                     <div className="header-edit-email">
