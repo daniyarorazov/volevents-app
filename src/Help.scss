@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .section-help {
+    padding-left: 150px;
+    padding-right: 150px;
+
+    .help-header-image {
+        width: 100px;
+      }
+      
+      .help-header-title {
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 64px;
+        text-align: start;
+        color: #000000;
+        margin-left: 70px;
+      }
+      
+      .header-help {}
+      
+      .header-help-items {
+        display: flex;
+        align-items: center;
+        margin-top: 100px;
+      }
+      
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #34495e;
+        color: #fff;
+      }
+      
+      h1 {
+        text-align: center;
+        margin: 2rem 0;
+        font-size: 2.5rem;
+      }
+      
+      .questions-body {
+        display: flex;
+      }
+      
+      .help-img {
+        width: 400px;
+        margin-left: 250px;
+      
+      }
+      
+      .accordion {
+        width: 100%;
+      }
+      
+      .accordion-item:nth-child(1) {
+        background: #FFFFFF;
+        border: 4px solid #337D5C;
+        box-sizing: border-box;
+        border-radius: 10px;
+        color: #111;
+        margin-top: 50px;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+      }
+      
+      .accordion-item:nth-child(2) {
+        background: #FFFFFF;
+        border: 4px solid#536DFE;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin-top: 100px;
+        color: #111;
+      
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+      }
+      
+      .accordion-item:nth-child(3) {
+        background: #FFFFFF;
+        border: 4px solid #F9A826;
+        box-sizing: border-box;
+        border-radius: 10px;
+        color: #111;
+        margin-top: 100px;
+      
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+      }
+      
+      .accordion-item:nth-child(4) {
+        background: #FFFFFF;
+        border: 4px solid #F50057;
+        box-sizing: border-box;
+        border-radius: 10px;
+        color: #111;
+        margin-top: 100px;
+      
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+      }
+      
+      .accordion-item:nth-child(5) {
+        background: #FFFFFF;
+        border: 4px solid #837AB7;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin-top: 100px;
+        color: #111;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+      }
+      
+      .accordion-item-header {
+        padding: 0.5rem 3rem 0.5rem 1rem;
+        min-height: 3.5rem;
+        line-height: 20px;
+        font-weight: 500;
+        font-size: 24px;
+      
+        color: #716D6A;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+      }
+      
+      .accordion-item-header::after {
+        content: "\002B";
+        font-size: 2rem;
+        position: absolute;
+        right: 1rem;
+      }
+      
+      .accordion-item-header.active::after {
+        content: "\2212";
+      }
+      
+      .accordion-item-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+      
+      .accordion-item-body-content {
+        padding: 1rem;
+        font-size: 24px;
+        border-top: 1px solid;
+        border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+      }
+      
+      @media (max-width: 991px) {
+        .section-help {
+          padding-left: 50px;
+          padding-right: 50px;
+        }
+      }
+      
+      @media(max-width:767px) {
+        html {
+          font-size: 14px;
+        }
+      
+        .help-img {
+          display: none;
+        }
+      
+        .section-help {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      
+        .help-header-title {
+          font-size: 48px;
+          margin-left: 5%;
+        }
+      
+        .help-header-image {
+          width: 64px;
+        }
+      
+        .accordion-item {
+          width: 100%;
+        }
+      }
+      
+      @media (max-width: 496px) {
+        .help-header-title {
+          font-size: 36px;
+        }
+      
+        .help-header-image {
+          width: 48px;
+        }
+      
+        .accordion-item-header {
+          font-size: 18px;
+        }
+      
+        .accordion-item-body-content {
+          font-size: 18px;
+        }
+      }
+      
+
+  }
+  
+  
