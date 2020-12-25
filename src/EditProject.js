@@ -1,8 +1,11 @@
 import React, { useState, useCallback } from 'react';
 import app from "./base.js";
 import { withRouter } from "react-router";
+import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from "uuid";
-
+import './DefaultStyles.css';
+import Sidebar from './Sidebar';
+import './EditProject.scss';
 
 
 const EditProject = ({history}) => {
@@ -13,11 +16,17 @@ const EditProject = ({history}) => {
     const project_id = window.location.search.replace('?id=', '').toString();
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
+    const [date, setDate] = useState('');
+    const [time, setTime] = useState('');
+    const [geolocation, setGeolocation] = useState('');
+    const [foodRadio, setFoodRadio] = useState('');
+    const [transportRadio, setTransportRadio] = useState('');
+    const [equipmentRadio, setEquipmentRadio] = useState('');
     
    
   
 
-    const handleAddProject = useCallback(async event => {
+    const handleEditProject = useCallback(async event => {
         event.preventDefault();
         const { title, description } = event.target.elements;
 
@@ -45,15 +54,84 @@ const EditProject = ({history}) => {
 
     return (
         <>
-            <h2>Edit project: {title}</h2>
-            <form onSubmit={handleAddProject}>
-                <input type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)}/>
-                <textarea type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} />
-                <button type="submit">Edit project</button>
-            </form>
+          
+           <Sidebar />
+
+            <main>
+                <div className="section-edit-project">
+                    <h2 className="section-title">Изменение мероприятия: {title}</h2>
+                    <div className="section-block">
+                        <form onSubmit={handleEditProject} className="main-form">
+                            <div className="group">
+                                <span class="group-label">Название</span>
+                                <input type="text" class="group-form" name="title" value={title} onChange={(e) => setTitle(e.target.value)} required />
+                            </div>
+                            <div className="group">
+                                <span class="group-label">Дата начала</span>
+                                <input type="text" class="group-form" name="date" value={date} onChange={(e) => setDate(e.target.value)} required />
+                            </div>
+                            <div className="group">
+                                <span class="group-label">Время начала</span>
+                                <input type="text" class="group-form" name="time" value={time} onChange={(e) => setTime(e.target.value)} required />
+                            </div>
+                            <div className="group">
+                                <span class="group-label">Место проведения</span>
+                                <input type="text" class="group-form" name="geolocation" value={geolocation} onChange={(e) => setGeolocation(e.target.value)} required />
+                            </div>
+                            <div className="group">
+                                <span class="group__subtitle">Бесплатная еда</span>
+                                <div className="group-radio">
+                                    <div className="radio">
+                                        <input className="radio__input" type="radio" name="foodRadio" value={"Yes"} onChange={(e) => setFoodRadio(e.target.value)} id="radio1" />
+                                        <span className="radio__text">Да</span>
+                                    </div>
+                                    <div className="radio">
+                                        <input className="radio__input" type="radio" name="foodRadio" value={"No"} onChange={(e) => setFoodRadio(e.target.value)} id="radio2" />
+                                        <span className="radio__text">Нет</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="group">
+                                <span class="group__subtitle">Бесплатная развозка</span>
+                                <div className="group-radio">
+                                    <div className="radio">
+                                        <input className="radio__input" type="radio" name="transportRadio" value={"Yes"} onChange={(e) => setTransportRadio(e.target.value)} id="radio1" />
+                                        <span className="radio__text">Да</span>
+                                    </div>
+                                    <div className="radio">
+                                        <input className="radio__input" type="radio" name="transportRadio" value={"No"} onChange={(e) => setTransportRadio(e.target.value)} id="radio2" />
+                                        <span className="radio__text">Нет</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="group">
+                                <span class="group__subtitle">Бесплатное оборудование</span>
+                                <div className="group-radio">
+                                    <div className="radio">
+                                        <input className="radio__input" type="radio" name="equipmentRadio" value={"Yes"} onChange={(e) => setEquipmentRadio(e.target.value)} id="radio1" />
+                                        <span className="radio__text">Да</span>
+                                    </div>
+                                    <div className="radio">
+                                        <input className="radio__input" type="radio" name="equipmentRadio" value={"No"} onChange={(e) => setEquipmentRadio(e.target.value)} id="radio2" />
+                                        <span className="radio__text">Нет</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="group">
+                                <span className="group-label">Описание мероприятия</span>
+                                <textarea type="text" className="group-form label-description" name="description" maxLength="1000" value={description} onChange={(e) => setDescription(e.target.value)} required></textarea>
+                            </div>
+                            <button type="submit" className="edit-project__button-create">Изменить</button>
+                        </form>
+                    </div>
+                    <Link to="/" className="edit-project__button-cancel"><span>Отмена</span></Link>
+                </div>
+            </main>
+
         </>
     )
 }
 
 export default withRouter(EditProject);
+
 
