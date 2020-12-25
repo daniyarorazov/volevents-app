@@ -33,20 +33,6 @@ const ListProjects = () => {
     if (loading) {
         return <div>Loading...</div>
     }
-
-
-    // Code to Html 
-
-    // {projects.map((project) => (
-    //     <div key={project.project_id}>
-    //         <h2>{project.title_project}</h2>
-    //         <p>{project.description_project}</p>
-    //         <Link to={`/edit_project?id=${project.project_id}`}>Edit project</Link>
-    //         <button onClick={() => ref.doc(project.project_id).delete()}>Delete project</button>
-    //         <hr className="line_project" />
-    //     </div>
-    // ))}
-
     
     
     return (

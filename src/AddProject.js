@@ -21,8 +21,6 @@ const AddProject = ({history}) => {
 
     const userId = app.auth().currentUser.uid;
 
-
-
     const handleAddProject = useCallback(async event => {
         event.preventDefault();
         const { title, description, date, time, geolocation, foodRadio, transportRadio, equipmentRadio } = event.target.elements;

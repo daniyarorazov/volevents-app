@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Route, Link } from 'react-router-dom';
 import { withRouter } from "react-router";
-import { v4 as uuidv4 } from "uuid";
 import Sidebar from './Sidebar';
 import app from "./base.js";
 import './EditProfile.scss';
@@ -17,8 +16,6 @@ const EditProfile = ({history}) => {
     const [lastname, setLastname] = useState('');
     
    
-  
-
     const handleEditProfile = useCallback(async event => {
         event.preventDefault();
         const { firstname, lastname } = event.target.elements;

@@ -97,13 +97,3 @@ const Profile = () => {
 
 export default Profile;
 
-{/* <div className="main">
-<h2 className="profile-title"></h2>
-<div className="profile-info">
-    <span className="profile-email">Your current email: { email }</span>
-</div>
-<div className="profile-control">
-    <Link className="profile-control__link" to={`/edit_profile_menu`}><button className="button profile-edit__button">Edit profile</button></Link>
-    <Link className="profile-control__link" to="/login"><button className="button profile-delete__button" onClick={deleteUser}>Delete profile</button></Link>
-</div>
-</div> */}

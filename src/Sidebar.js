@@ -8,7 +8,7 @@ const Sidebar = () => {
         <div className="navbar">
           <ul className="navbar-nav">
             <li className="logo">
-              <a href="#" className="nav-link">
+              <a href="/" className="nav-link">
                
                 <span className="link-text logo-text">VolApp</span>
                 <svg
@@ -43,15 +43,6 @@ const Sidebar = () => {
                     <span className="link-text">События</span>
                 </a>
             </Link>
-
-            <Link to="/help" className="nav-item">
-              <a href="#" className="nav-link">
-                <img className="nav-icon" src={require('./images/Sidebar/help.svg').default} alt="" />
-                <span className="link-text">Помощь</span>
-              </a>
-            </Link>
-
-
             <Link to="/profile" className="nav-item">
               <a href="#" className="nav-link">
                 <img className="nav-icon" src={require('./images/Sidebar/user.svg').default} alt="" />

@@ -59,7 +59,7 @@ const EditProject = ({history}) => {
 
             <main>
                 <div className="section-edit-project">
-                    <h2 className="section-title">Изменение мероприятия: {title}</h2>
+                    <h2 className="section-title">Изменение мероприятия</h2>
                     <div className="section-block">
                         <form onSubmit={handleEditProject} className="main-form">
                             <div className="group">
