@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Route, Link } from 'react-router-dom';
 import { withRouter } from "react-router";
 import Sidebar from './Sidebar';
@@ -14,7 +14,26 @@ const EditProfile = ({history}) => {
     const profile_id = window.location.search.replace('?id=', '').toString();
     const [firstname, setFirstname] = useState('');
     const [lastname, setLastname] = useState('');
-    
+
+    const getUserData = async () => {
+        try {
+            db.collection("users")
+            .doc(app.auth().currentUser.uid)
+            .get()
+            .then(doc => {
+                setFirstname(doc.get("firstname"));
+                setLastname(doc.get("lastname"));
+            });
+            
+
+        } catch (error) {
+            alert(error)
+        } 
+    }
+
+    useEffect(() => {
+        getUserData();
+    }, []);
    
     const handleEditProfile = useCallback(async event => {
         event.preventDefault();
@@ -34,7 +53,9 @@ const EditProfile = ({history}) => {
         }
     }, [history]); 
 
-
+    useEffect(() => {
+        document.title = `Edit user`;
+    });
 
     return (
         <>
@@ -59,14 +80,14 @@ const EditProfile = ({history}) => {
                                     name="firstname"
                                     className="edit__new-profile input"
                                     value={firstname}
-                                    onChange={(e) => setFirstname(e.target.value)}
+                                    onChange={e => setFirstname(e.target.value)}
                                     placeholder="Имя" />
                                 <input
                                     type="text"
                                     name="lastname"
                                     className="edit__password input"
                                     value={lastname}
-                                    onChange={(e) => setLastname(e.target.value)}
+                                    onChange={e => setLastname(e.target.value)}
                                     placeholder="Фамилие" />
 
                                 <button

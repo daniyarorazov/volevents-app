@@ -8,9 +8,10 @@ import './EditUserEmail.scss';
 
 const EditUserEmail = ({history}) => {
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const email_user = app.auth().currentUser.email;
+    const [email, setEmail] = useState(email_user);
+    const [password, setPassword] = useState('');
+    
     const user_id = app.auth().currentUser.uid;
 
     const handleEditUserEmail = useCallback(async event => {
